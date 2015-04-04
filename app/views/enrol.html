@@ -1,0 +1,50 @@
+   <md-toolbar>
+    <h1 class="md-toolbar-tools">
+      Enrolar Usuario
+    </h1>
+  </md-toolbar>
+  <md-content class="md-padding">
+    <form name="projectForm" ng-submit="newUser(enrolForm,$event)">
+      <md-input-container>
+        <label>Nombre</label>
+        <input md-maxlength="15" required name="nombre" ng-model="enrolForm.Nombre">
+        <div ng-messages="enrolForm.Nombre.$error">
+          <div ng-message="required">Debes ingresar un nombre.</div>
+          <div ng-message="md-maxlength">El nombre debe tener menos de 15 caracteres</div>
+        </div>
+      </md-input-container>
+      <md-input-container>
+        <label>Apellido</label>
+        <input required name="apellido" ng-model="enrolForm.Apellido">
+        <div ng-messages="enrolForm.Apellido.$error">
+          <div ng-message="required">Debes ingresar un apellido.</div>
+        </div>
+      </md-input-container>
+      <md-input-container>
+        <label>Cédula de identidad</label>
+        <input required type="number" step="any" name="cedula" ng-model="enrolForm.Cedula">
+        <div ng-messages="enrolForm.Cedula.$error">
+          <div ng-message="required">Debes ingresar una cédula</div>
+          </div>
+      </md-input-container>
+        <md-input-container>
+        <label>Departamento</label>
+        <input type="text" step="any" name="Departamento" ng-model="enrolForm.Departamento">
+      </md-input-container>
+      <md-input-container flex>
+          <label>E-mail</label>
+          <input type="email" ng-model="enrolForm.Email">
+        <div ng-messages="enrolForm.Email.$error">
+          <div ng-message="email">Debes ingresar un correo válido</div>
+          </div>
+        </md-input-container>
+      <md-input-container flex>
+          <label>Fecha de Nacimiento</label>
+          <input type="date" required ng-model="enrolForm.FechaNacimiento">
+        <div ng-messages="enrolForm.FechaNacimiento.$error">
+          <div ng-message="required">Debes ingresar una fecha</div>
+          </div>
+        </md-input-container>
+      <md-button class="md-raised md-primary">Enrolar</md-button>
+    </form>
+  </md-content>

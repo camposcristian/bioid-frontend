@@ -1,0 +1,21 @@
+  <md-toolbar class="verify md-default">
+    <div class="md-toolbar-tools">
+      <span class="md-flex">Verificar</span>
+    </div>
+  </md-toolbar>
+<md-grid-list
+        md-cols-sm="4" md-cols-md="5" md-cols-gt-md="6"
+        md-row-height-gt-md="1:1" md-row-height="2:2"
+        md-gutter="12px"  md-gutter-gt-sm="8px">
+        <md-grid-tile ng-repeat="tile in tiles"
+                      ng-animate="'animate'"
+                      md-rowspan="{{tile.row}}"
+                      md-colspan="{{tile.col}}"
+                      ng-class="tile.color"
+                      class="md-whiteframe-z4"
+                      ng-click="verify(tile.markId,$event)"> 
+          <md-icon ng-class="tile.size" md-svg-src="/images/{{tile.img}}" alt="Entrada"></md-icon>
+          <md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
+        </md-grid-tile>          
+    
+</md-grid-list>

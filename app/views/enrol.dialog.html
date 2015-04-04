@@ -1,0 +1,25 @@
+<md-dialog aria-label="Enrolando" layout="column" layout-align="center center">
+<md-toolbar class="md-accent">
+<h1 class="md-toolbar-tools">
+  Enrolando
+</h1>
+</md-toolbar>
+<md-content class="md-padding" layout="column" layout-align="center center">
+<div class="dialog-content" layout="column" layout-align="center center">
+        <md-icon  md-svg-src="{{image}}" class="md-accent" style="font-size:128px; height:128px; width:128px"
+                 alt="Pulgar">
+        </md-icon>
+  <h3 layout="column" class="md-padding"  layout-align="center center">
+    {{content}}
+  </h3>
+</div>
+<md-progress-linear class="md-accent" md-mode="buffer" value="{{progress}}" md-buffer-value="{{progress+10}}">
+</md-progress-linear>
+</md-content>
+  <div class="md-actions" layout="row">
+    <span flex></span>
+    <md-button ng-click="hide()" class="md-warn">
+      Cerrar
+    </md-button>
+  </div>
+</md-dialog>

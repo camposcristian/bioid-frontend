@@ -1,0 +1,33 @@
+<md-dialog aria-label="Verificando" layout="column" layout-align="center center">
+<md-toolbar class="md-accent">
+<h1 class="md-toolbar-tools">
+  Verificando
+</h1>
+</md-toolbar>
+<md-content class="md-padding sticky-container" ng-hide="isOk" layout="column" layout-align="center center">
+<div class="dialog-content" layout="column" layout-align="center center">
+        <md-icon  md-svg-src="{{image}}" class="md-accent" style="color: #777; font-size:128px; height:128px; width:128px"
+                 alt="Pulgar">
+        </md-icon>
+  <h3 layout="column" class="md-padding"  layout-align="center center">
+    {{content}}
+  </h3>
+</div>
+</md-content>
+<md-content class="md-padding sticky-container" ng-show="isOk" layout="column" layout-align="center center">
+<div class="dialog-content" layout="column" layout-align="center center">
+        <img  ng-src="{{image}}" class="md-accent" style="font-size:128px; height:128px; width:128px"
+                 alt="Pulgar">
+        </img>
+  <h3 layout="column" class="md-padding"  layout-align="center center">
+    {{content}}
+  </h3>
+</div>
+</md-content>
+  <div class="md-actions" layout="row">
+    <span flex></span>
+    <md-button ng-click="hide()" class="md-warn">
+      Cerrar
+    </md-button>
+  </div>
+</md-dialog>
