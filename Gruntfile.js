@@ -237,7 +237,7 @@ module.exports = function (grunt) {
       options: {
         assetsDirs: [
           '<%= yeoman.dist %>',
-          // '<%= yeoman.dist %>/images',
+          '<%= yeoman.dist %>/images',
           '<%= yeoman.dist %>/styles'
         ]
       }
@@ -341,8 +341,9 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             '*.html',
+            '*.config',
             'views/{,*/}*.html',
-            'images/{,*/}*.{webp,svg}',
+            'images/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*'
           ]
         }, {
