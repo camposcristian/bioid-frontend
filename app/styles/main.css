@@ -59,3 +59,11 @@ md-grid-tile.md-whiteframe-z4.ng-isolate-scope:active {
 	opacity: 1;
 	height: 30px;
 }
+
+.listdemoBasicUsage md-divider {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+  
+  md-tabs:not(.md-no-tab-content):not(.md-dynamic-height){
+	  min-height: 800px;
+  }

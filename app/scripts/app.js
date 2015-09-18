@@ -31,6 +31,10 @@ angular
         templateUrl: 'views/verify.html',
         controller: 'VerifyCtrl'
       })
+      .when('/search', {
+        templateUrl: 'views/search.html',
+        controller: 'SearchCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
