@@ -26,6 +26,14 @@ md-grid-tile.md-whiteframe-z4.ng-isolate-scope:active {
 	top: 2px;
 }
 
+.md-virtual-repeat-sizer{
+	height: 80px;
+}
+
+.md-autocomplete-suggestions li{
+	height: 80px;
+}
+
 
 .animate-enter, 
 .animate-leave { 
